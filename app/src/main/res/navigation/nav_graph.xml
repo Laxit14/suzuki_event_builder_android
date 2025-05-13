@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.multitv.eventbuilder.ui.home.fragment.Home"
+        android:label="Home">
+        <action
+            android:id="@+id/HomeFragment_NotificationFragment"
+            app:destination="@+id/NotificationFragment" />
+        <action
+            android:id="@+id/homeFragment_to_welcomeFragment"
+            app:destination="@+id/welcomeFragment" />
+        <action
+            android:id="@+id/homeFragment_to_hotelstayFragment"
+            app:destination="@+id/hotelStayFragment" />
+        <action
+            android:id="@+id/homeFragment_to_travelandstayFragment"
+            app:destination="@+id/travelandstay" />
+        <action
+            android:id="@+id/homeFragment_to_lamplightingFragment"
+            app:destination="@+id/lamplightFragment" />
+        <action
+            android:id="@+id/homeFragment_to_profileFragment"
+            app:destination="@+id/profileFragment" />
+
+        <action
+            android:id="@+id/homeFragment_to_weatherFragment"
+            app:destination="@+id/weatherFragment" />
+        <action
+            android:id="@+id/homeFragment_to_conferenceFragment"
+            app:destination="@+id/conferenceFragment" />
+        <action
+            android:id="@+id/homeFragment_to_notesFragment"
+            app:destination="@+id/noteFragment" />
+        <action
+            android:id="@+id/homeFragment_to_antalyaTour"
+            app:destination="@+id/antalyaTour" />
+        <action
+            android:id="@+id/homeFragment_to_conferenceDetailFragment"
+            app:destination="@id/conferenceDetailFragment" />
+        <action
+            android:id="@+id/homeFragment_to_searingplanFragment"
+            app:destination="@id/dressCodeFragment" />
+        <action
+            android:id="@+id/homeFragment_to_LocalizationFragment"
+            app:destination="@id/localizationFragment" />
+        <action
+            android:id="@+id/homeFragment_to_foodFragment"
+            app:destination="@id/foodDetailFragment" />
+        <action
+            android:id="@+id/homeFragment_to_cameraFragment"
+            app:destination="@id/msvcCameraCorner" />
+
+        <action
+            android:id="@+id/homeFragment_to_notificationFragment_home"
+            app:destination="@+id/notificationFragment_home" />
+        <action android:id="@+id/action_home_notification_to_conferenceAgenda"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_home_notification_to_speaker"
+            app:destination="@id/ourSpeakerFragment" />
+        <action android:id="@+id/action_home_notification_to_seatingPlan"
+            app:destination="@id/seatingPlanFragment" />
+        <action android:id="@+id/action_home_notification_to_dressCode"
+            app:destination="@id/dressCodeFragment" />
+        <action android:id="@+id/action_home_notification_to_detailsAgenda"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_home_notification_to_gallery"
+            app:destination="@id/conferenceGalleryFragment" />
+        <action android:id="@+id/action_home_notification_to_scTeam"
+            app:destination="@id/conferenceScTeamFragment" />
+        <action android:id="@+id/action_home_notification_to_awards"
+            app:destination="@id/awardFragment" />
+        <action android:id="@+id/action_home_notification_to_digitalExhibition"
+            app:destination="@id/digitalExhibitionFragment" />
+        <action android:id="@+id/action_home_notification_to_emergencyContact"
+            app:destination="@id/emergencyContactFragment" />
+        <action android:id="@+id/action_home_notification_to_msilContact"
+            app:destination="@id/MsilContactFragment" />
+        <action android:id="@+id/action_home_notification_to_aboutDoha"
+            app:destination="@id/antalyaTour" />
+        <action android:id="@+id/action_home_notification_to_travelDetails"
+            app:destination="@id/travelDetail" />
+        <action android:id="@+id/action_home_notification_to_hotelStay"
+            app:destination="@id/hotelStayFragment" />
+        <action android:id="@+id/action_home_notification_to_shuttleBusDetails"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_home_notification_to_eventLocation"
+            app:destination="@id/eventLocationFragment" />
+
+        <action android:id="@+id/action_home_notification_to_guestGallivant"
+            app:destination="@id/conferenceDetailFragment" />
+
+        <action android:id="@+id/action_home_notification_to_foodDetails"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_home_notification_to_weather"
+            app:destination="@id/weatherFragment" />
+        <action android:id="@+id/action_home_notification_to_dosDont"
+            app:destination="@id/do_donotFragment" />
+        <action android:id="@+id/action_home_notification_to_feedback"
+            app:destination="@id/feedbackFragment" />
+        <action android:id="@+id/action_home_notification_to_entertainment"
+            app:destination="@id/entertainmentFragment" />
+        <action android:id="@+id/action_home_notification_to_currencyConverter"
+            app:destination="@id/currencyConverter" />
+        <action android:id="@+id/action_home_notification_to_welcome"
+            app:destination="@id/welcomeFragment" />
+        <action android:id="@+id/action_home_notification_to_msvcCameraCorner"
+            app:destination="@id/msvcCameraCorner" />
+        <action android:id="@+id/action_home_notification_to_askYourQuestion"
+            app:destination="@id/askQuestionFragment" />
+        <action android:id="@+id/action_home_notification_to_digitalExhibitionFeedback"
+            app:destination="@id/digitalExhibitionFeedbackFragment" />
+        <action android:id="@+id/action_home_notification_to_notes"
+            app:destination="@id/noteFragment" />
+        <action android:id="@+id/action_home_notification_to_lamplight"
+            app:destination="@id/lamplightFragment" />
+
+
+
+        <action android:id="@+id/action_home_notification_to_lamp"
+            app:destination="@id/lamplightFragment" />
+
+    </fragment>
+
+    <fragment android:id="@+id/conferenceFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.conferencechild.fragment.Conference"
+        android:label="Conference"
+        tools:layout="@layout/fragment_conference">
+
+        <action android:id="@+id/conferenceFragment_to_conferenceDetailFragment"
+            app:destination="@id/conferenceDetailFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_Profile"
+            app:destination="@id/profileFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_ourSpeakerFragment"
+            app:destination="@id/ourSpeakerFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_msilcontactFragment"
+            app:destination="@id/MsilContactFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_seatingPlanFragment"
+            app:destination="@id/seatingPlanFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_dressCodeFragment"
+            app:destination="@id/dressCodeFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_emergencyContactFragment"
+            app:destination="@id/emergencyContactFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_scTeamFragment"
+            app:destination="@id/conferenceScTeamFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_conferenceGalleryFragment"
+            app:destination="@id/conferenceGalleryFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_awardsFragment"
+            app:destination="@id/awardFragment"/>
+
+        <action android:id="@+id/conferenceFragment_to_digitalExhibition"
+            app:destination="@+id/digitalExhibitionFragment"/>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/travelandstay"
+        android:name="com.multitv.eventbuilder.ui.travelstay.travelstayContent.fragment.TravelStayFragment"
+        tools:layout="@layout/fragment_travelstay_content"
+        android:label="Travel and Stay">
+
+        <action android:id="@+id/travelFragment_to_weatherFragment"
+            app:destination="@+id/weatherFragment"/>
+
+        <action android:id="@+id/travelFragment_to_hotelstayFragment"
+            app:destination="@+id/hotelStayFragment"/>
+
+        <action android:id="@+id/travelFragment_to_mustKnowFragment"
+            app:destination="@+id/mustKnowFragment"/>
+
+        <action android:id="@+id/travelFragment_to_aboutDohaFragment"
+            app:destination="@+id/antalyaTour"/>
+
+        <action android:id="@+id/travelFragment_to_eventLocationFragment"
+            app:destination="@+id/eventLocationFragment"/>
+
+        <action android:id="@+id/travelFragment_to_spouseTourfragment"
+            app:destination="@+id/spouseTourDetail"/>
+
+        <action android:id="@+id/travelFragment_to_shuttlebusFragment"
+            app:destination="@+id/shuttleBusDetailFragment"/>
+
+        <action android:id="@+id/travelFragment_to_travelDetail"
+            app:destination="@+id/travelDetail"/>
+
+        <action
+            android:id="@+id/travelFragment_to_conferenceDetailFragment"
+            app:destination="@id/conferenceDetailFragment" />
+
+        <action
+            android:id="@+id/travelFragment_to_do_donotFragmet"
+            app:destination="@id/do_donotFragment" />
+
+
+    </fragment>
+
+    <fragment android:id="@+id/interactionFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.interactionchild.fragment.Interactionchild"
+        android:label="Interaction">
+
+
+        <action android:id="@+id/interactionFragment_to_feedbackFragment"
+            app:destination="@+id/feedbackFragment"/>
+
+        <action android:id="@+id/interactionFragment_to_currencyConverter"
+            app:destination="@+id/currencyConverter"/>
+
+        <action android:id="@+id/interactionFragment_to_askQuestionFragment"
+            app:destination="@+id/askQuestionFragment"/>
+
+        <action android:id="@+id/interactionFragment_to_msvcCameraCornerFragment"
+            app:destination="@+id/msvcCameraCorner"/>
+
+        <action android:id="@+id/interactionFragment_to_entertainmentFragment"
+            app:destination="@+id/entertainmentFragment"/>
+
+        <action android:id="@+id/interactionFragment_to_localizationFragment"
+            app:destination="@+id/localizationFragment"/>
+
+        <action android:id="@+id/interactionFragment_to_digitalExhibition"
+            app:destination="@+id/digitalExhibitionFragment"/>
+
+        <action android:id="@+id/interactionFragment_to_digitalExhibitionFeedback"
+            app:destination="@+id/digitalExhibitionFeedbackFragment"/>
+
+
+    </fragment>
+
+    <fragment android:id="@+id/NotificationFragment"
+        android:name="com.multitv.eventbuilder.ui.notification.fragment.Notification"
+        android:label="Notification"/>
+
+
+    <fragment android:id="@+id/conferenceDetailFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.conference_detail.fragment.ConfrenceFragmentDetail"
+        android:label="conferenceDetail"
+        tools:layout="@layout/fragment_conference_detail">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="imageRes"
+            app:argType="integer" />
+
+
+    </fragment>
+
+    <fragment android:id="@+id/welcomeFragment"
+        android:name="com.multitv.eventbuilder.ui.welcome_msvc.fragment.WelcomeMsvcFragment"
+        android:label="Welcome"
+        tools:layout="@layout/welcome_msvc"/>
+
+    <fragment android:id="@+id/hotelStayFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.Hotel_Stay.fragment.HotelAndStayFragment"
+        tools:layout="@layout/fragment_hotelstay"
+        android:label="Hotel And Stay">
+
+        <action android:id="@+id/hotelstayFragment_to_aboutHotelFragment"
+            app:destination="@+id/aboutHotelFragment"/>
+
+    </fragment>
+
+
+
+    <fragment android:id="@+id/ourSpeakerFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.ourspeakers.fragment.OurSpeakerFragment"
+        android:label="Our Speaker"
+        tools:layout="@layout/fragment_our_speakers">
+
+        <action android:id="@+id/ourSpeakerFragment_to_speakerFragment"
+            app:destination="@id/speakerFragment"/>
+
+    </fragment>
+
+   <fragment android:id="@+id/speakerFragment"
+       android:name="com.multitv.eventbuilder.ui.conference.speaker.fragment.SpeakerFragment"
+       tools:layout="@layout/fragment_speaker"
+       android:label="Speaker"/>
+
+    <fragment android:id="@+id/MsilContactFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.msilContact.fragment.MsilContactFragment"
+        tools:layout="@layout/fragment_msil_contact"
+        android:label="Msil Contact"/>
+
+    <fragment android:id="@+id/seatingPlanFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.seatingplan.fragment.SeatingPlanFragment"
+        tools:layout="@layout/fragment_seating_plan"
+        android:label="Seating Plan"/>
+
+    <fragment android:id="@+id/dressCodeFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.dresscode.fragment.Dresscode"
+        tools:layout="@layout/fragment_dresscode"
+        android:label="Dress Code"/>
+
+    <fragment android:id="@+id/emergencyContactFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.emergencyContact.fragment.EmergencyContactFragment"
+        tools:layout="@layout/fragment_emergency_contact"
+        android:label="Emergency Contact"/>
+
+    <fragment android:id="@+id/conferenceGalleryFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.conferenceGallery.fragment.ConferenceGalleryFragment"
+        tools:layout="@layout/fragment_conference_gallery"
+        android:label="Conference Gallery">
+
+        <action android:id="@+id/action_conferenceGalleryFragment_to_imagePreviewFragment"
+            app:destination="@id/imagePreviewFragment"/>
+
+        <action android:id="@+id/firstFragment_to_Profile"
+            app:destination="@id/profileFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/conferenceScTeamFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.scTeam.fragment.ScTeamFragment"
+        tools:layout="@layout/sc_team_fragment"
+        android:label="Sc Fragment"/>
+
+    <fragment android:id="@+id/weatherFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.weather.fragment.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather"/>
+
+    <fragment android:id="@+id/mustKnowFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.mustknow.fragment.MustKnowFragment"
+        tools:layout="@layout/fragment_mustknow"
+        android:label="Must Know"/>
+
+    <fragment android:id="@+id/currencyConverter"
+        android:name="com.multitv.eventbuilder.ui.interaction.currencyconvertor.fragment.CurrencyConvertorFragment"
+        android:label="Currency Converter"
+        tools:layout="@layout/fragment_currency_convertor"/>
+
+    <fragment android:id="@+id/lamplightFragment"
+        android:name="com.multitv.eventbuilder.ui.lamplight.fragment.LampLightFragment"
+        tools:layout="@layout/fragment_lamplighting"
+        android:label="Lamp Light"/>
+
+    <fragment android:id="@+id/aboutHotelFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.Hotel_Stay.fragment.AboutHotelFragment"
+        android:label="About Hotel"
+        tools:layout="@layout/fragment_about_hotel"/>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.multitv.eventbuilder.ui.profile.fragment.ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:label="Profile"/>
+
+    <fragment android:id="@+id/noteFragment"
+        android:name="com.multitv.eventbuilder.ui.mynotes.fragment.MyNotesFragment"
+        tools:layout="@layout/fragment_mynote"
+        android:label="MyNotes">
+
+        <action
+            android:id="@+id/action_myNotesFragment_to_noteDetailFragment"
+            app:destination="@id/noteDetailFragment" />
+
+    </fragment>
+
+    <fragment android:id="@+id/antalyaTour"
+        android:name="com.multitv.eventbuilder.ui.travelstay.aboutanatalya.fragment.AntalyaFragment"
+        tools:layout="@layout/fragment_antalya_tour"
+        android:label="Antalya Tour"/>
+
+    <fragment android:id="@+id/feedbackFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.feedback_survey.fragment.FeedbackFragment"
+        tools:layout="@layout/fragment_feedback"
+        android:label="Feedback"/>
+
+    <fragment android:id="@+id/eventLocationFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.eventlocation.fragment.EventLocationFragment"
+        tools:layout="@layout/fragment_eventlocation"
+        android:label="Event Location"/>
+
+    <fragment android:id="@+id/askQuestionFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.askyouquestion.AskQuestionFragment"
+        tools:layout="@layout/fragment_question_slip"
+        android:label="AskQuestion"/>
+
+    <fragment android:id="@+id/foodDetailFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.fooddetail.fragment.FoodDetailFragment"
+        tools:layout="@layout/fragment_conference_detail"
+        android:label="Food Detail"/>
+
+    <fragment android:id="@+id/shuttleBusDetailFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.shuttlebusdetail.fragment.ShuttlebusDetailFragment"
+        tools:layout="@layout/fragment_conference_detail"
+        android:label="ShuttleBus Detail"/>
+
+    <fragment android:id="@+id/spouseTourDetail"
+        android:name="com.multitv.eventbuilder.ui.travelstay.spousetour.fragment.SpouseTourFragment"
+        tools:layout="@layout/fragment_conference_detail"
+        android:label="Spouse Detail"/>
+
+    <fragment android:id="@+id/travelDetail"
+        android:name="com.multitv.eventbuilder.ui.travelstay.travelDetail.fragment.TravelDetailFragment"
+        tools:layout="@layout/fragment_travel_detail"
+        android:label="Travel Detail"/>
+
+    <fragment android:id="@+id/msvcCameraCorner"
+        android:name="com.multitv.eventbuilder.ui.interaction.mvsc_camera.fragment.CameraCornerFragment"
+        tools:layout="@layout/fragment_camera_corner_msvc"
+        android:label="Camera Corner"/>
+
+    <fragment android:id="@+id/do_donotFragment"
+        android:name="com.multitv.eventbuilder.ui.travelstay.dodonot.fragment.DoDoNotFragment"
+        tools:layout="@layout/fragment_do_donot"
+        android:label="Do_DoNot"/>
+
+    <fragment android:id="@+id/entertainmentFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.entertainment.EntertainMentFragment"
+        tools:layout="@layout/fragment_entertainment"
+        android:label="@string/entertainment"/>
+
+
+    <fragment android:id="@+id/awardFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.awards.fragment.AwardsFragment"
+        tools:layout="@layout/fragment_awords"
+        android:label="Awards"/>
+
+ <fragment android:id="@+id/localizationFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.localization.fragment.LocalizationFragment"
+        tools:layout="@layout/fragment_localization"
+        android:label="Localization"/>
+
+    <fragment android:id="@+id/digitalExhibitionFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.digital_exhibition.fragment.DigitalExhibitionFragment"
+        tools:layout="@layout/fragment_digital_exhibition"
+        android:label="Digital Exhibition">
+
+        <action android:id="@+id/digitalExhibition_digitalExhibitionFeedback"
+            app:destination="@+id/digitalExhibitionFeedbackFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteDetailFragment"
+        android:name="com.multitv.eventbuilder.ui.mynotes.detailenotes.fragment.NoteDetailFragment"
+        tools:layout="@layout/fragment_note_detail"
+        android:label="Note Detail" />
+
+    <fragment
+        android:id="@+id/imagePreviewFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.conferenceGallery.subfragment.fragment.FullImageFragment"
+        android:label="Image Preview"
+        tools:layout="@layout/fragment_full_image" />
+
+
+    <fragment
+        android:id="@+id/notificationFragment_home"
+        android:name="com.multitv.eventbuilder.ui.notification.fragment.Notification"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification">
+        <action android:id="@+id/action_notification_to_conferenceAgenda"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_notification_to_conference"
+            app:destination="@id/conferenceFragment" />
+        <action android:id="@+id/action_notification_to_speaker"
+            app:destination="@id/ourSpeakerFragment" />
+        <action android:id="@+id/action_notification_to_seatingPlan"
+            app:destination="@id/seatingPlanFragment" />
+        <action android:id="@+id/action_notification_to_dressCode"
+            app:destination="@id/dressCodeFragment" />
+        <action android:id="@+id/action_notification_to_detailsAgenda"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_notification_to_gallery"
+            app:destination="@id/conferenceGalleryFragment" />
+        <action android:id="@+id/action_notification_to_scTeam"
+            app:destination="@id/conferenceScTeamFragment" />
+        <action android:id="@+id/action_notification_to_awards"
+            app:destination="@id/awardFragment" />
+        <action android:id="@+id/action_notification_to_digitalExhibition"
+            app:destination="@id/digitalExhibitionFragment" />
+        <action android:id="@+id/action_notification_to_emergencyContact"
+            app:destination="@id/emergencyContactFragment" />
+        <action android:id="@+id/action_notification_to_msilContact"
+            app:destination="@id/MsilContactFragment" />
+        <action android:id="@+id/action_notification_to_aboutDoha"
+            app:destination="@id/antalyaTour" />
+        <action android:id="@+id/action_notification_to_travelDetails"
+            app:destination="@id/travelDetail" />
+        <action android:id="@+id/action_notification_to_hotelStay"
+            app:destination="@id/hotelStayFragment" />
+        <action android:id="@+id/action_notification_to_shuttleBusDetails"
+            app:destination="@id/conferenceDetailFragment" />
+        <action android:id="@+id/action_notification_to_eventLocation"
+            app:destination="@id/eventLocationFragment" />
+        <action android:id="@+id/action_notification_to_guestGallivant"
+            app:destination="@id/spouseTourDetail" />
+        <action android:id="@+id/action_notification_to_foodDetails"
+            app:destination="@id/foodDetailFragment" />
+        <action android:id="@+id/action_notification_to_weather"
+            app:destination="@id/weatherFragment" />
+        <action android:id="@+id/action_notification_to_dosDont"
+            app:destination="@id/do_donotFragment" />
+        <action android:id="@+id/action_notification_to_feedback"
+            app:destination="@id/feedbackFragment" />
+        <action android:id="@+id/action_notification_to_entertainment"
+            app:destination="@id/entertainmentFragment" />
+        <action android:id="@+id/action_notification_to_currencyConverter"
+            app:destination="@id/currencyConverter" />
+        <action android:id="@+id/action_notification_to_welcome"
+            app:destination="@id/welcomeFragment" />
+        <action android:id="@+id/action_notification_to_msvcCameraCorner"
+            app:destination="@id/msvcCameraCorner" />
+        <action android:id="@+id/action_notification_to_askYourQuestion"
+            app:destination="@id/askQuestionFragment" />
+        <action android:id="@+id/action_notification_to_digitalExhibitionFeedback"
+            app:destination="@id/digitalExhibitionFeedbackFragment" />
+        <action android:id="@+id/action_notification_to_notes"
+            app:destination="@id/noteFragment" />
+
+
+        <action android:id="@+id/action_notification_to_lamp"
+            app:destination="@id/lamplightFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/digitalExhibitionFeedbackFragment"
+        android:name="com.multitv.eventbuilder.ui.interaction.digitalexhibitionfeedback.fragment.DigitalExhibitionFeedback"
+        android:label="Digital Exhibition Feedback"
+        tools:layout="@layout/fragment_digital_exhibition_feedback" />
+<!--    <fragment
+        android:id="@+id/firstTabFragment"
+        android:name="com.multitv.eventbuilder.ui.conference.conferenceGallery.fragment.FirstTabFragment"
+        android:label="FirstTabFragment" >
+        <action android:id="@+id/firstFragment_to_Profile"
+            app:destination="@id/profileFragment"/>
+    </fragment>-->
+
+
+</navigation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout">
+
+    <!-- Background Color -->
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewpager_color" />-->
+
+    <!-- Image View (for images only) -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <!-- Video Player View (for videos only) -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/videoView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="false"/>
+
+
+    <!-- Text Overlay -->
+    <TextView
+        android:id="@+id/imageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        tools:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_sp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <ImageButton
+        android:id="@+id/muteButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/mute" />
+
+</FrameLayout>

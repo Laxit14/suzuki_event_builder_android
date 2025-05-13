@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backimg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Background Image (Placed Last So It Doesn't Overlap Other Views) -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/momentum_next_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/overlay"/>
+        <!-- Back Button -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/thirty_five_dp"
+            android:layout_height="@dimen/thirty_five_dp"
+            android:layout_margin="8dp"
+            android:padding="10dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-50dp"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="30dp"
+           android:paddingVertical="20dp">
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/profileInformation"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               app:strokeColor="#FFFFFF"
+               app:strokeWidth="2dp"
+               app:cardBackgroundColor="#54FFFFFF"
+               app:cardCornerRadius="10dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:paddingVertical="20dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/shareIcon"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/share"
+                       android:visibility="gone"
+                       android:layout_marginEnd="10dp"
+                       android:layout_marginTop="10dp"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/profileName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="AKHTAR HOSSAIN"
+                       android:textColor="#FFFFFF"
+                       android:textSize="18sp"
+                       android:fontFamily="@font/roboto_medium"
+                       android:layout_marginTop="50dp"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/msilText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="MSIL SC"
+                       android:textColor="#FFFFFF"
+                       android:textSize="17sp"
+                       android:visibility="gone"
+                       android:fontFamily="@font/roboto"
+                       app:layout_constraintTop_toBottomOf="@+id/profileName"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/email"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Email"
+                       android:visibility="gone"
+                       android:textColor="@color/white"
+                       android:layout_marginTop="15dp"
+                       android:textSize="15sp"
+                       android:fontFamily="@font/roboto_medium"
+                       app:layout_constraintTop_toBottomOf="@+id/msilText"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/emailContent"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="Akhtar.hossain@maruti.co.in"
+                       android:textColor="#D1C7C7"
+                       android:textAlignment="center"
+                       android:textSize="15sp"
+                       android:visibility="gone"
+                       android:fontFamily="@font/roboto"
+                       app:layout_constraintTop_toBottomOf="@+id/email"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/userMobileNo"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Phone Number"
+                       android:layout_marginTop="30dp"
+                       android:textColor="#FFFFFF"
+                       android:textSize="15sp"
+                       android:fontFamily="@font/roboto_medium"
+                       app:layout_constraintTop_toBottomOf="@+id/emailContent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/userMobileNoContent"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="8586925816"
+                       android:textColor="#D1C7C7"
+                       android:textSize="15sp"
+                       android:layout_marginBottom="@dimen/ten_dp"
+                       android:textAlignment="center"
+                       android:fontFamily="@font/roboto"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/userMobileNo"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+                   <ImageView
+                       android:id="@+id/qr"
+                       android:layout_width="0dp"
+                       android:layout_height="120dp"
+                       android:scaleType="centerInside"
+                       android:src="@drawable/qr"
+                       android:visibility="gone"
+                       android:layout_marginTop="@dimen/ten_dp"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/userMobileNoContent"/>
+
+                   <TextView
+                       android:id="@+id/scanText"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="Scan to Register"
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       android:visibility="gone"
+                       android:textAlignment="center"
+                       android:fontFamily="@font/roboto_medium"
+                       app:layout_constraintTop_toBottomOf="@+id/qr"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/logoutll"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:paddingVertical="15dp"
+               android:background="@drawable/welcome"
+               android:orientation="horizontal"
+               android:layout_marginTop="30dp"
+               app:layout_constraintTop_toBottomOf="@+id/profileInformation"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent">
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/logoutText"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Logout"
+                   android:drawablePadding="@dimen/ten_dp"
+                   android:drawableLeft="@drawable/logouticon"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/roboto"
+                   android:textSize="16sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"/>
+
+               <!--<androidx.appcompat.widget.AppCompatImageView
+                   android:id="@+id/logoutIcon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/logouticon"
+                   app:layout_constraintEnd_toStartOf="@+id/logoutText"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/deleteAccountButton"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:paddingVertical="15dp"
+               android:visibility="gone"
+               android:background="@drawable/delete_account"
+               app:layout_constraintTop_toBottomOf="@+id/logoutll"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent">
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Delete Account"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/roboto"
+                   android:textSize="15sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"/>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        android:layout_marginTop="-30dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <ImageView
+            android:id="@+id/lacation1"
+            android:layout_width="match_parent"
+            android:src="@drawable/user__1_"
+            android:layout_height="match_parent" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

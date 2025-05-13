@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="20dp"
+    android:layout_marginEnd="@dimen/ten_dp"
+    android:gravity="center"
+    android:background="@drawable/feedback_drawable">
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/group_263"
+        android:layout_marginVertical="6dp"/>
+
+    <TextView
+        android:id="@+id/dayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wed, 25"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24°C"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="14sp"
+        android:textColor="#FFAB00"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tempText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24°C"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+</LinearLayout>

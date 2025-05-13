@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_note_detail.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/noteTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note Title"
+        android:textColor="@color/bottomBar_color"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/noteContentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note content goes here."
+        android:textSize="15sp"
+        android:textColor="@color/gray_text"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

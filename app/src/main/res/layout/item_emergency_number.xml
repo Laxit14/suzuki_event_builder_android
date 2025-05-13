@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/contentll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contactName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="pankaj kumar"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="15sp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contactPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+917417322289"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"
+            android:textSize="15sp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentll"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

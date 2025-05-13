@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp">
+
+    <!-- Day Text -->
+    <TextView
+        android:id="@+id/weatherDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sat."
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weatherIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <!-- Weather Icon -->
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/weather_old"
+        app:layout_constraintStart_toEndOf="@id/weatherDay"
+        app:layout_constraintEnd_toStartOf="@id/tempMin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <!-- Min Temperature -->
+    <TextView
+        android:id="@+id/tempMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="29°"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/weatherIcon"
+        app:layout_constraintEnd_toStartOf="@id/tempBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <!-- Temperature Bar -->
+    <View
+        android:id="@+id/tempBar"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintStart_toEndOf="@id/tempMin"
+        app:layout_constraintEnd_toStartOf="@id/tempMax"
+        app:layout_constraintTop_toTopOf="@id/tempMin"
+        app:layout_constraintBottom_toBottomOf="@id/tempMin"
+        app:layout_constraintHorizontal_weight="2"/>
+
+    <!-- Max Temperature -->
+    <TextView
+        android:id="@+id/tempMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="31°"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tempBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

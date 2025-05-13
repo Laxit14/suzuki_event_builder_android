@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <WebView
+        android:id="@+id/webViewFirstTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/noUrlMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="if your picture has already been uploaded, it’s currently being processed and may take a little time. If not, please upload your picture in profile section to proceed."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+          />
+
+        <TextView
+            android:id="@+id/uploadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+           />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

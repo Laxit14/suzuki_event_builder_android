@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:cardBackgroundColor="@color/card_back_66"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/white"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingVertical="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/flyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="FLY TO DOHA AIRPORT"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageEvent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/time1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/time_color1"
+            android:textSize="@dimen/twelve_sp"
+            app:layout_constraintTop_toBottomOf="@+id/flyName" />
+        <TextView
+            android:id="@+id/tripDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx km"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintEnd_toEndOf="@id/time"
+            app:layout_constraintStart_toStartOf="@+id/time"
+            app:layout_constraintTop_toBottomOf="@id/time"/>
+        <View
+            android:id="@+id/leftView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/fly_drawable"
+            app:layout_constraintTop_toBottomOf="@id/flyName"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <View
+            android:id="@+id/middleView"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@id/leftView"
+            app:layout_constraintEnd_toStartOf="@id/rightView"
+            app:layout_constraintTop_toTopOf="@id/leftView"
+            app:layout_constraintBottom_toBottomOf="@id/leftView"/>
+
+        <View
+            android:id="@+id/rightView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:background="@drawable/fly_drawable"
+            app:layout_constraintTop_toTopOf="@id/leftView"
+            app:layout_constraintEnd_toStartOf="@+id/imageEvent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tripImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            app:tint="@color/white"
+            android:background="@drawable/event_drawable_location"
+            app:layout_constraintStart_toStartOf="@+id/leftView"
+            app:layout_constraintEnd_toEndOf="@+id/rightView"
+            app:layout_constraintTop_toTopOf="@+id/leftView"
+            app:layout_constraintBottom_toBottomOf="@+id/leftView"/>
+
+
+        <TextView
+            android:id="@+id/departureCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Delhi"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/leftView"
+            app:layout_constraintTop_toBottomOf="@id/leftView"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/departureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airport"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/departureCity"
+            app:layout_constraintTop_toBottomOf="@id/departureCity"/>
+
+        <TextView
+            android:id="@+id/arrivalCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doha"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rightView"
+            app:layout_constraintTop_toBottomOf="@id/rightView"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/arrivalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airport"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/arrivalCity"
+            app:layout_constraintTop_toBottomOf="@id/arrivalCity"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageEvent"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotelstaynew"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageViewStyle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

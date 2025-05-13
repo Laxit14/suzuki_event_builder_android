@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/parentCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#707070"
+    app:strokeWidth="1dp"
+    app:cardBackgroundColor="@color/transparent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:background="@color/transparent"
+            android:elevation="0dp">
+
+            <TextView
+                android:id="@+id/stay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STAY 1"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#D0D0D0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHERATON GRAND"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/stay"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/hotelLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="DOHA"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/hotelName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hotelName" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:strokeWidth="2dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/hotelName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hotelImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bannerpalce"
+                    android:scaleType="fitXY"/>
+
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#D0D0D0"
+                app:layout_constraintTop_toBottomOf="@+id/imageContainer"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/contentDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hotel_description"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+

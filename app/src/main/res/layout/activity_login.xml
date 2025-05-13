@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/appimage"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/bg"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/cornertop"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/captureCard"
+                android:layout_width="@dimen/one_fifty_dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/fifty_dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dash_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/profileIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                       android:src="@drawable/user__1_"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/camera"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toTopOf="@+id/bottomCameraIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/bottomCameraIcon"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end"
+                        android:background="@drawable/profile_icon_drawable"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" >
+
+                        <ImageView
+                            android:id="@+id/cameraIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginEnd="15dp"
+                            app:tint="@android:color/white"
+                            android:src="@drawable/camerapreview"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imageCaptureCard"
+                android:layout_width="@dimen/one_fifty_dp"
+                android:layout_height="@dimen/one_fifty_dp"
+                android:padding="@dimen/twenty_dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/fifty_dp"
+                android:radius="@dimen/eight_dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imageCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/camera"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/camerapreview" />
+
+            </com.google.android.material.card.MaterialCardView>
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/thirty_dp"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:background="@drawable/edittext"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:visibility="gone"
+                android:autofillHints="username"
+                android:hint="@string/enetr_username"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/fifteen_sp" />
+            <EditText
+                android:id="@+id/phoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:layout_marginHorizontal="@dimen/thirty_dp"
+                android:background="@drawable/edittext"
+                android:gravity="center"
+                android:textColor="@color/gray_text"
+                android:autofillHints="phoneNumber"
+                android:hint="@string/enter_phone_no"
+                android:inputType="phone"
+                android:padding="@dimen/fifteen_dp"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="@dimen/thirty_dp"
+                android:visibility="visible"
+                android:textColor="@color/bottomBar_color"
+                android:textSize="@dimen/twelve_sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkboxTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/gray_text" />
+
+                <TextView
+                    android:id="@+id/textViewTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/termandcondition"
+                    android:textColor="@color/bottomBar_color"
+                    android:textSize="14sp"
+                    android:paddingStart="4dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/fifteen_dp"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/spannabletext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="Not a member yet? Sign up"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Timeline Dot -->
+    <ImageView
+        android:id="@+id/dot"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/circular_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topll"/>
+
+    <!-- Timeline Line (Now starts exactly from the center of the dot) -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/topll"
+        app:layout_constraintStart_toStartOf="@id/dot"
+        app:layout_constraintEnd_toEndOf="@id/dot"
+        app:layout_constraintTop_toBottomOf="@id/dot" />
+
+    <!-- Activity Details -->
+    <LinearLayout
+        android:id="@+id/topll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Lorem lepsum"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/activityTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="06:30 Hrs Onwards"
+            android:visibility="gone"
+            android:textColor="@color/subtext"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/activityVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="lorem lepsum Resort"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/subtext"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

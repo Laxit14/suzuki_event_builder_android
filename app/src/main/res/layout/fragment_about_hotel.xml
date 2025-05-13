@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backimg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hotel_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Background Image (Placed Last So It Doesn't Overlap Other Views) -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Back Button -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/thirty_five_dp"
+            android:layout_height="@dimen/thirty_five_dp"
+            android:layout_margin="8dp"
+            android:padding="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp">
+
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="SHERATON GRAND"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/mobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="+974 448-54444"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hotelName"/>
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/hotel_description1"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/hotelName"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageGoogleMap"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:src="@drawable/google_map"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/mapAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show in map"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageGoogleMap"
+               app:layout_constraintTop_toTopOf="@+id/imageGoogleMap"
+                app:layout_constraintStart_toEndOf="@id/imageGoogleMap"/>
+
+            <TextView
+                android:id="@+id/amenities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Amenities"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#E2D4D4"
+                app:layout_constraintTop_toBottomOf="@+id/mapAddress"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/wifiContainer"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="10dp"
+                android:visibility="visible"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:layout_constraintTop_toBottomOf="@+id/amenities"
+                app:layout_constraintStart_toStartOf="parent">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_wifi"
+                        android:layout_gravity="center" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WIFI"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"/>
+
+                </FrameLayout>
+                
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/gymContainer"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="10dp"
+                android:visibility="visible"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/transparent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toTopOf="@+id/wifiContainer"
+                app:layout_constraintStart_toEndOf="@+id/wifiContainer">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_walk"
+                        android:layout_gravity="center"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GYM"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"/>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/barContainer"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="10dp"
+                android:visibility="visible"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/transparent"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toTopOf="@+id/gymContainer"
+                app:layout_constraintBottom_toBottomOf="@+id/gymContainer"
+                app:layout_constraintStart_toEndOf="@+id/gymContainer">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_wine"
+                        android:layout_gravity="center" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BAR"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"/>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#E2D4D4"
+                app:layout_constraintTop_toBottomOf="@+id/wifiContainer"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/contentDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/hotel_description2"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/listOfNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Important Phone Numbers Inside The Hotel"
+                android:textSize="12sp"
+                app:layout_goneMarginTop="23dp"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#E2D4D4"
+                app:layout_constraintTop_toBottomOf="@+id/contentDescription"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listOfNUmberRecycler"
+                android:layout_width="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listOfNumber"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
